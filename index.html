@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji Enterprises - Premium Fire Safety Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e63946;
+            --secondary: #f4a261;
+            --dark: #1d3557;
+            --light: #f1faee;
+            --accent: #a8dadc;
+            --success: #2a9d8f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--dark);
+            margin: 30px 0 20px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1611159063981-b8c8c4301869?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            font-size: 1.1rem;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 20px;
+            background: white;
+            margin: 40px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .feature-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            background: var(--light);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Products Section */
+        .filter-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 16px 32px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        
+        .filter-btn i {
+            font-size: 1.4rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--success);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .product-img-container {
+            height: 220px;
+            overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .product-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-category {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+            font-weight: 700;
+        }
+        
+        .product-desc {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .product-specs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .spec {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .spec i {
+            color: var(--primary);
+        }
+        
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+        
+        .add-to-cart {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .add-to-cart:hover {
+            background: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        
+        /* More Products Button */
+        .more-products {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .more-products-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--dark);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        
+        .more-products-btn:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .more-products-btn i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .more-products-btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Services Section */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            background: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-desc {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(rgba(29, 53, 87, 0.9), rgba(29, 53, 87, 0.9)), 
+                        url('https://images.unsplash.com/photo-1611159063981-b8c8c4301869?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            opacity: 0.2;
+            line-height: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid var(--accent);
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            color: var(--accent);
+        }
+        
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .rating {
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* Contact Section Improvements */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding: 30px;
+            background: var(--light);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .contact-details {
+            margin-bottom: 35px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-icon {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-right: 20px;
+            margin-top: 3px;
+            background: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text h4 {
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .contact-text p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-text a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-text a:hover {
+            color: var(--dark);
+            text-decoration: underline;
+        }
+
+        .social-section {
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--dark);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .contact-form {
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-form h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .contact-form h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            background: #f9f9f9;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+            background: white;
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .contact-form button:hover {
+            background: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-col {
+            padding: 0 15px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-links i {
+            font-size: 0.9rem;
+            width: 20px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 20px 0;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Sign Boards Section */
+        .sign-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .sign-category-btn {
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .sign-category-btn:hover, .sign-category-btn.active {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .sign-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .sign-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .sign-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .sign-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            background: var(--light);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        
+        .sign-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .sign-desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* New Features */
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(135deg, var(--primary), #c1121f);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emergency-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.1) 10px,
+                rgba(255,255,255,0.1) 20px
+            );
+        }
+        
+        .emergency-banner a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--dark), #457b9d);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            padding: 30px 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 99;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--dark);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-info, .contact-form {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                gap: 10px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 5px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+            
+            .filter-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-col h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .sign-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-info, .contact-form {
+                padding: 20px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+                align-self: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container">
+            <i class="fas fa-exclamation-triangle"></i> Emergency Fire Safety Services Available 24/7 - Call Now: <a href="tel:+917411616167">+91 7411616167</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://uploads.onecompiler.io/43dtnu92q/43dtqfeb8/Balaji%20enterprisess%20invoce%20logo.png" alt="Balaji Enterprises - Fire Safety Solutions">
+                <div class="logo-text">
+                    <h1 style="color: white; font-size: 1.8rem;">Balaji Enterprises</h1>
+                </div>
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="https://y7ubhudav3tqtq.github.io/Balaji-Enterprises-Products-Page/">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#signboards">Sign Boards</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Premium Fire Safety Solutions for Bangalore</h2>
+            <p>Protecting homes and businesses with high-quality fire safety equipment and expert consultation services since 2015.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn">Our Products</a>
+                <a href="#contact" class="btn btn-outline">Emergency Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-text">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Emergency Support</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Certified Products</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="section" id="about">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Fire Safety Partner</h3>
+                    <p>Balaji Enterprises has been at the forefront of fire safety solutions in Bangalore since 2015. We specialize in providing top-quality fire protection equipment and services to residential, commercial, and industrial clients.</p>
+                    <p>Our mission is to prevent fire-related tragedies through reliable products, professional installation, and comprehensive safety education. With a team of certified professionals and a commitment to excellence, we've become Bangalore's most trusted fire safety provider.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Certified Products</h4>
+                                <p>All our equipment meets ISO and BIS standards</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>24/7 Support</h4>
+                                <p>Emergency services available round the clock</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4>Expert Team</h4>
+                                <p>Trained professionals with 10+ years experience</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <div>
+                                <h4>Best Prices</h4>
+                                <p>Competitive pricing without compromising quality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Balaji Enterprises team at work" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Section -->
+        <section class="section" id="products">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p class="subtitle">Browse our extensive range of fire safety equipment and signage, all designed to keep your premises safe and compliant with regulations.</p>
+            </div>
+            
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-boxes"></i> All Products
+                </button>
+                <button class="filter-btn" data-filter="extinguishers">
+                    <i class="fas fa-fire-extinguisher"></i> Fire Extinguishers
+                </button>
+                <button class="filter-btn" data-filter="signboards">
+                    <i class="fas fa-sign"></i> Sign Boards
+                </button>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Fire Extinguishers -->
+                <div class="product-card" data-category="extinguishers">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-img-container">
+                        <img src="https://uploads.onecompiler.io/43dtnu92q/43hakdvf4/5-kg-co2-fire-extinguisher.jpg" alt="CO2 Fire Extinguisher 5kg" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Extinguishers</span>
+                        <h3 class="product-title">CO2 Fire Extinguisher (5kg)</h3>
+                        <p class="product-desc">Ideal for electrical fires. Comes with wall mounting bracket and pressure gauge.</p>
+                        <div class="product-specs">
+                            <div class="spec"><i class="fas fa-weight"></i> 5kg</div>
+                            <div class="spec"><i class="fas fa-fire"></i> Class B, C</div>
+                            <div class="spec"><i class="fas fa-certificate"></i> ISI Certified</div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="extinguishers">
+                    <div class="product-img-container">
+                        <img src="https://5.imimg.com/data5/LC/PM/MY-33475741/abc-fire-extinguisher-500x500.jpg" alt="ABC Powder Fire Extinguisher 4kg" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Extinguishers</span>
+                        <h3 class="product-title">ABC Powder Extinguisher (4kg)</h3>
+                        <p class="product-desc">Multi-purpose for Class A, B & C fires. ISI marked with wall bracket.</p>
+                        <div class="product-specs">
+                            <div class="spec"><i class="fas fa-weight"></i> 4kg</div>
+                            <div class="spec"><i class="fas fa-fire"></i> Class A, B, C</div>
+                            <div class="spec"><i class="fas fa-certificate"></i> ISI Certified</div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="extinguishers">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-img-container">
+                        <img src="https://uploads.onecompiler.io/43dtnu92q/43pnhyp7f/MECHANICAL%20FOAM%20TYPE%20fire%20extinguisher%2045%20kg.jpg" alt="Foam Fire Extinguisher" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Extinguishers</span>
+                        <h3 class="product-title">Foam Fire Extinguisher (6kg)</h3>
+                        <p class="product-desc">For Class A and B fires. Effective on flammable liquids with long range.</p>
+                        <div class="product-specs">
+                            <div class="spec"><i class="fas fa-weight"></i> 6kg</div>
+                            <div class="spec"><i class="fas fa-fire"></i> Class A, B</div>
+                            <div class="spec"><i class="fas fa-certificate"></i> ISI Certified</div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sign Boards -->
+                <div class="product-card" data-category="signboards">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-img-container">
+                        <img src="https://uploads.onecompiler.io/43dtnu92q/43pnhyp7f/Photoluminescent%20Fire%20Exit%20Sign%20LARGE%20-%20Man%20on%20Left%20-%20600%20x%20150Hmm%20-%20Self%20Adhesive%20Rigid%20Plastic%20-%20%5BAS-PH14-SARP%5D.jpeg" alt="Fire Exit Sign" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Sign Boards</span>
+                        <h3 class="product-title">Glow Fire Exit Sign</h3>
+                        <p class="product-desc">Photoluminescent sign, visible in darkness. Easy installation.</p>
+                        <div class="product-specs">
+                            <div class="spec"><i class="fas fa-lightbulb"></i> Glow in Dark</div>
+                            <div class="spec"><i class="fas fa-bolt"></i> Easy Install</div>
+                            <div class="spec"><i class="fas fa-paint-brush"></i> Weatherproof</div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="signboards">
+                    <div class="product-img-container">
+                        <img src="https://uploads.onecompiler.io/43dtnu92q/43pnhyp7f/Fire%20Extinguisher%20Labels%20-%20Fire%20Extinguisher%20Label%20-%207%20x%2010_%20-%203_5%20Mil%20InfiniStick%E2%84%A2%20Vinyl%20Label.jpeg" alt="Fire Extinguisher Sign" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Sign Boards</span>
+                        <h3 class="product-title">Fire Extinguisher ID Sign</h3>
+                        <p class="product-desc">Clear identification sign for fire extinguisher locations. Universal symbols.</p>
+                        <div class="product-specs">
+                            <div class="spec"><i class="fas fa-paint-brush"></i> Weatherproof</div>
+                            <div class="spec"><i class="fas fa-bolt"></i> Easy Install</div>
+                            <div class="spec"><i class="fas fa-certificate"></i> ISI Certified</div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="signboards">
+                    <div class="product-badge">New</div>
+                    <div class="product-img-container">
+                        <img src="https://uploads.onecompiler.io/43dtnu92q/43pnhyp7f/Red%20Fire%20Assembly%20Point%20Sign%20-%2010%20%C3%97%2014%E2%80%B3%20-%20_040%E2%80%B3%20Engineering%20Grade%20Reflective%20Aluminum.jpeg" alt="Fire Assembly Point Sign" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Sign Boards</span>
+                        <h3 class="product-title">Fire Assembly Point Sign</h3>
+                        <p class="product-desc">Clear marking for emergency assembly points. Highly visible design.</p>
+                        <div class="product-specs">
+                            <div class="spec"><i class="fas fa-paint-brush"></i> Weatherproof</div>
+                            <div class="spec"><i class="fas fa-bolt"></i> Easy Install</div>
+                            <div class="spec"><i class="fas fa-eye"></i> High Visibility</div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Products Button -->
+            <div class="more-products">
+                <a href="https://y7ubhudav3tqtq.github.io/Balaji-Enterprises-Products-Page/" class="more-products-btn" id="moreProductsBtn" target="_blank">
+                    <span>View All Products</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="section" id="services">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3 class="service-title">Equipment Installation</h3>
+                    <p class="service-desc">Professional installation of fire extinguishers, alarms, and suppression systems by certified technicians.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="service-title">Annual Maintenance</h3>
+                    <p class="service-desc">Regular inspection and maintenance contracts to ensure your equipment is always ready for emergencies.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="service-title">Safety Training</h3>
+                    <p class="service-desc">Comprehensive fire safety training programs for staff and residents with live demonstrations.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 class="service-title">Compliance Audits</h3>
+                    <p class="service-desc">Fire safety audits to ensure your premises meet all regulatory requirements and standards.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Emergency Repairs</h3>
+                    <p class="service-desc">Quick response team for emergency repairs and replacements of fire safety equipment.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="service-title">Safety Consultancy</h3>
+                    <p class="service-desc">Expert advice on fire safety planning, risk assessment, and optimal equipment placement.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="section testimonials" id="testimonials">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Balaji Enterprises installed fire safety systems in our apartment complex. Their team was professional, knowledgeable, and completed the work ahead of schedule. The training session they conducted was particularly helpful for our residents.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Ravi Kumar" class="author-img">
+                        <div class="author-info">
+                            <h4>Ravi Kumar</h4>
+                            <p>Apartment Association President</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">The fire extinguisher we purchased from Balaji Enterprises actually saved our restaurant kitchen from a major fire incident. Their product quality is exceptional and their emergency response is commendable.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Priya Sharma" class="author-img">
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">We've been using Balaji Enterprises for our factory's fire safety needs for 3 years now. Their maintenance service is reliable and their technicians are always willing to go the extra mile to ensure our safety compliance.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Arun Patel" class="author-img">
+                        <div class="author-info">
+                            <h4>Arun Patel</h4>
+                            <p>Factory Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sign Boards Section -->
+        <section class="section" id="signboards">
+            <div class="section-title">
+                <h2>Safety Sign Boards</h2>
+                <p class="subtitle">Comprehensive range of safety signs for all environments - industrial, commercial, and residential</p>
+            </div>
+            
+            <div class="sign-categories">
+                <button class="sign-category-btn active" data-category="all">All Signs</button>
+                <button class="sign-category-btn" data-category="prohibition">Prohibition</button>
+                <button class="sign-category-btn" data-category="mandatory">Mandatory</button>
+                <button class="sign-category-btn" data-category="warning">Warning</button>
+                <button class="sign-category-btn" data-category="safe">Safe Condition</button>
+                <button class="sign-category-btn" data-category="fire">Fire Safety</button>
+            </div>
+            
+            <div class="sign-grid">
+                <!-- Prohibition Signs -->
+                <div class="sign-item" data-category="prohibition">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3 class="sign-title">No Smoking</h3>
+                    <p class="sign-desc">Smoking is strictly prohibited in this area</p>
+                </div>
+                
+                <div class="sign-item" data-category="prohibition">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-door-closed"></i>
+                    </div>
+                    <h3 class="sign-title">No Entry</h3>
+                    <p class="sign-desc">Unauthorized persons not allowed beyond this point</p>
+                </div>
+                
+                <div class="sign-item" data-category="prohibition">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="sign-title">No Mobile Phones</h3>
+                    <p class="sign-desc">Mobile phone use restricted in this area</p>
+                </div>
+                
+                <div class="sign-item" data-category="prohibition">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3 class="sign-title">No Parking</h3>
+                    <p class="sign-desc">Parking not allowed in this area</p>
+                </div>
+                
+                <!-- Mandatory Signs -->
+                <div class="sign-item" data-category="mandatory">
+                    <div class="sign-icon" style="color: #1d3557;">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="sign-title">Safety Helmet Area</h3>
+                    <p class="sign-desc">Safety helmet must be worn in this area</p>
+                </div>
+                
+                <div class="sign-item" data-category="mandatory">
+                    <div class="sign-icon" style="color: #1d3557;">
+                        <i class="fas fa-mitten"></i>
+                    </div>
+                    <h3 class="sign-title">Safety Gloves Required</h3>
+                    <p class="sign-desc">Protective gloves must be worn</p>
+                </div>
+                
+                <div class="sign-item" data-category="mandatory">
+                    <div class="sign-icon" style="color: #1d3557;">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3 class="sign-title">Eye Protection</h3>
+                    <p class="sign-desc">Safety glasses must be worn in this area</p>
+                </div>
+                
+                <div class="sign-item" data-category="mandatory">
+                    <div class="sign-icon" style="color: #1d3557;">
+                        <i class="fas fa-volume-mute"></i>
+                    </div>
+                    <h3 class="sign-title">Hearing Protection</h3>
+                    <p class="sign-desc">Ear protection must be worn in this area</p>
+                </div>
+                
+                <!-- Warning Signs -->
+                <div class="sign-item" data-category="warning">
+                    <div class="sign-icon" style="color: #f4a261;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="sign-title">High Voltage</h3>
+                    <p class="sign-desc">Danger of electric shock - high voltage area</p>
+                </div>
+                
+                <div class="sign-item" data-category="warning">
+                    <div class="sign-icon" style="color: #f4a261;">
+                        <i class="fas fa-radiation"></i>
+                    </div>
+                    <h3 class="sign-title">Radiation Hazard</h3>
+                    <p class="sign-desc">Radiation risk - proper protection required</p>
+                </div>
+                
+                <div class="sign-item" data-category="warning">
+                    <div class="sign-icon" style="color: #f4a261;">
+                        <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <h3 class="sign-title">Toxic Material</h3>
+                    <p class="sign-desc">Toxic substances present - handle with care</p>
+                </div>
+                
+                <div class="sign-item" data-category="warning">
+                    <div class="sign-icon" style="color: #f4a261;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="sign-title">Slippery Surface</h3>
+                    <p class="sign-desc">Caution - slippery floor area</p>
+                </div>
+                
+                <!-- Safe Condition Signs -->
+                <div class="sign-item" data-category="safe">
+                    <div class="sign-icon" style="color: #2a9d8f;">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h3 class="sign-title">First Aid Station</h3>
+                    <p class="sign-desc">Location of first aid facilities</p>
+                </div>
+                
+                <div class="sign-item" data-category="safe">
+                    <div class="sign-icon" style="color: #2a9d8f;">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                    <h3 class="sign-title">Emergency Shower</h3>
+                    <p class="sign-desc">Emergency shower location</p>
+                </div>
+                
+                <div class="sign-item" data-category="safe">
+                    <div class="sign-icon" style="color: #2a9d8f;">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="sign-title">Eye Wash Station</h3>
+                    <p class="sign-desc">Emergency eye wash facility location</p>
+                </div>
+                
+                <div class="sign-item" data-category="safe">
+                    <div class="sign-icon" style="color: #2a9d8f;">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <h3 class="sign-title">Assembly Point</h3>
+                    <p class="sign-desc">Designated meeting area in emergencies</p>
+                </div>
+                
+                <!-- Fire Safety Signs -->
+                <div class="sign-item" data-category="fire">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3 class="sign-title">Fire Extinguisher</h3>
+                    <p class="sign-desc">Location of fire extinguisher</p>
+                </div>
+                
+                <div class="sign-item" data-category="fire">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="sign-title">Fire Hose Reel</h3>
+                    <p class="sign-desc">Location of fire hose reel</p>
+                </div>
+                
+                <div class="sign-item" data-category="fire">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="sign-title">Fire Alarm</h3>
+                    <p class="sign-desc">Fire alarm call point location</p>
+                </div>
+                
+                <div class="sign-item" data-category="fire">
+                    <div class="sign-icon" style="color: #e63946;">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3 class="sign-title">Fire Exit</h3>
+                    <p class="sign-desc">Emergency fire exit route</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>1st Main, Nageshi Mahalakshmi Temple Road, Vinayakanagara<br>
+                                Ramohalli Post, Kengeri Hobli, Bangalore - 560074</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Contact</h4>
+                                <p>Krishna Murthy: <a href="tel:+917411616167">+91 7411616167</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:balajienterprises199415@gmail.com">balajienterprises199415@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                                Emergency Services: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61562346900286" class="social-link" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/balaji.enterprises.24/" class="social-link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/+917411616167" class="social-link" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="service">Service Request</option>
+                                <option value="emergency">Emergency</option>
+                                <option value="complaint">Complaint</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Balaji Enterprises</h3>
+                <p>Your trusted partner for fire safety solutions in Bangalore since 2015. We provide quality products and services to keep you safe.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bangalore - 560074</p>
+                <p><i class="fas fa-phone"></i> +91 7411616167</p>
+                <p><i class="fas fa-envelope"></i> balajienterprises199415@gmail.com</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-arrow-right"></i> Home</a></li>
+                    <li><a href="https://y7ubhudav3tqtq.github.io/Balaji-Enterprises-Products-Page/"><i class="fas fa-arrow-right"></i> Products</a></li>
+                    <li><a href="#services"><i class="fas fa-arrow-right"></i> Services</a></li>
+                    <li><a href="#about"><i class="fas fa-arrow-right"></i> About Us</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-arrow-right"></i> Testimonials</a></li>
+                    <li><a href="#signboards"><i class="fas fa-arrow-right"></i> Sign Boards</a></li>
+                    <li><a href="#contact"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Products</h3>
+                <ul class="footer-links">
+                    <li><a href="#products"><i class="fas fa-arrow-right"></i> Fire Extinguishers</a></li>
+                    <li><a href="#products"><i class="fas fa-arrow-right"></i> Alarms & Detectors</a></li>
+                    <li><a href="#products"><i class="fas fa-arrow-right"></i> Safety Gear</a></li>
+                    <li><a href="#signboards"><i class="fas fa-arrow-right"></i> Safety Sign Boards</a></li>
+                    <li><a href="#products"><i class="fas fa-arrow-right"></i> Accessories</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services"><i class="fas fa-arrow-right"></i> Equipment Installation</a></li>
+                    <li><a href="#services"><i class="fas fa-arrow-right"></i> Annual Maintenance</a></li>
+                    <li><a href="#services"><i class="fas fa-arrow-right"></i> Safety Training</a></li>
+                    <li><a href="#services"><i class="fas fa-arrow-right"></i> Compliance Audits</a></li>
+                    <li><a href="#services"><i class="fas fa-arrow-right"></i> Emergency Repairs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Balaji Enterprises. All Rights Reserved.<i class="fas fa-heart" style="color: #e63946;"></i> for a safer Bangalore</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Product filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Filter products
+                    productCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            if (card.getAttribute('data-category') === filter) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Sign category filtering
+            const signCategoryButtons = document.querySelectorAll('.sign-category-btn');
+            const signItems = document.querySelectorAll('.sign-item');
+            
+            signCategoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    signCategoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const category = button.getAttribute('data-category');
+                    
+                    // Filter signs
+                    signItems.forEach(item => {
+                        if (category === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            if (item.getAttribute('data-category') === category) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Add to cart functionality
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('.product-title').textContent;
+                    
+                    alert(`${productName} added to cart!`);
+                    
+                    // You can implement full cart functionality here
+                });
+            });
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (navLinks.classList.contains('active')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                });
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
